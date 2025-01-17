@@ -13,7 +13,14 @@ In this tutorial, you will learn how to deploy a Strapi app to Railway. Strapi i
 ## Hello, Strapi
 
 Open up your working directory and create a new Strapi project.
-
 ```shell
-npx create-strapi-app@latest hello --quickstart
+npx create-strapi-app@latest hello --quickstart --no-run
+```
+
+Generate an admin user for your project.
+```shell
+cd hello
+```
+```shell
+npm run strapi admin:create-user -- --firstname=Kai --lastname=Doe --email=chef@strapi.io --password=Gourmet1234
 ```
