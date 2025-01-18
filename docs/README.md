@@ -24,3 +24,56 @@ cd hello
 ```shell
 npm run strapi admin:create-user -- --firstname=Kai --lastname=Doe --email=chef@strapi.io --password=Gourmet1234
 ```
+
+Generate a Single Type named `hello`.
+```shell
+npm run strapi generate
+```
+
+```
+content-type
+Content type display name hello
+? Content type singular name hello
+? Content type plural name hellos
+? Please choose the model type Collection Type
+? Do you want to add attributes? Yes
+? Name of attribute global
+? What type of attribute (Use arrow keys)
+? What type of attribute text
+? Do you want to add another attribute? No
+? Where do you want to add this model? Add model to new API
+? Name of the new API? hello
+? Bootstrap API related files? Yes
+```
+
+Add a Text field called global.
+
+Enable public access to the API.
+```ts
+//./src/api/hello/routes/hello.ts
+import { factories } from '@strapi/strapi';
+
+export default  factories.createCoreRouter('api::hello.hello', {
+  config: {
+    find: {
+      auth: false
+    },
+    create: {
+      auth: false
+    }
+  }
+});
+```
+
+Publish it with the value "hie". Run your Strapi server.
+```shell
+npm run develop
+```
+
+In a different terminal session run this:
+```shell
+curl -X POST http://localhost:1337/api/hello \
+  -H 'Content-Type: application/json' \
+  -d '{"data": {"message": "hie"}}'
+```
+
