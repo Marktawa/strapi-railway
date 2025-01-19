@@ -24,7 +24,7 @@ git clone https://github.com/Marktawa/strapi-railway
 
 Install dependencies.
 ```shell
-cd strapi railway/hello
+cd strapi-railway/hello
 ```
 
 ```shell
