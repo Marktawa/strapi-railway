@@ -123,13 +123,13 @@ We will use the dashboard for a start.
 
 ### Create a new Railway project
 
-Visit dev.new in your browser. This will redirect you to railway.com/new and you will see a **New Project** modal with deployment options.
+Visit https://dev.new in your browser. This will redirect you to https://railway.com/new and you will see a **New Project** modal with deployment options.
 
 ![Railway New Project Modal](https://res.cloudinary.com/craigsims808/image/upload/v1735561144/freelance/falcon-feather/railway-create-new-project-dashboard_x3f2le.png)
 
 Select **Deploy from GitHub repo** and choose the repo you created previously.
 
-![Deploy From GitHub repo](https://res.cloudinary.com/craigsims808/image/upload/v1735561971/freelance/falcon-feather/deploy-from-github-repo_wv8yvf.png)
+![Deploy From GitHub repo](https://res.cloudinary.com/craigsims808/image/upload/v1737251920/strapi/strapi-railway/deploy-from-github-repo_v33pmh.png)
 
 The Railway platform will read the contents of your repo, initialize the project, build and then deploy it automatically as a service.
 
