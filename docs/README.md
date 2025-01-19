@@ -1,6 +1,12 @@
 # How to self-host Strapi on Railway
 
-In this tutorial, you will learn how to deploy a Strapi app on Railway. Strapi is a CMS you can use to easily build APIs for your apps. Railway is hosting platform that supports all kinds of apps.
+![Cover](/docs/cover.png)
+
+Self-hosting Strapi on Railway is an efficient and cost-effective way to deploy and manage your Strapi-powered projects. Strapi, an open-source headless CMS, provides developers with a flexible platform to build and customize APIs, while Railway simplifies the deployment process with its robust and developer-friendly infrastructure.
+
+In this guide, you'll learn how to set up Strapi locally, prepare your project for deployment, and host it on Railway using two methods: the Railway CLI and GitHub integration. By following this tutorial, you'll have a fully operational Strapi app running online, ready to serve content and expose APIs to your applications.
+
+Whether you're new to Strapi or an experienced developer looking to optimize your deployment workflow, this guide provides clear and actionable steps to achieve your goals. Let’s dive in!
 
 ## Pre-requisites
 
@@ -81,11 +87,11 @@ You should see the following JSON response:
 
 ## Deploy to Railway using CLI
 
-Stop your Strapi server using `CTRL` + `C`. 
-
 Railway offers many ways to deploy your web app. You can use the dashboard, the CLI, the API etc. This article: [Railway Deployment Options](https://docs.railway.com/quick-start) explains all the numerous ways you can deploy an app on the Railway platform.
 
 In this step, we will use the Railway CLI. If you prefer using the dashboard skip to the next section.
+
+Stop your Strapi server using `CTRL` + `C`. 
 
 In your terminal, install the Railway CLI tool:
 ```shell
@@ -115,7 +121,7 @@ railway up --detach
 The deployment will fail, as you will need to update your Railway project with the necessary environment variables. 
 The following variables need to be added to your Strapi project in Railway: `HOST`, `PORT`, `APP_KEYS`, `API_TOKEN_SALT`, `ADMIN_JWT_SECRET`, `TRANSFER_TOKEN_SALT`, `DATABASE_CLIENT`, `DATABASE_FILENAME`, `DATABASE_SSL` and `JWT_SECRET`.
 
-Use the following values:
+Copy the values from your `.env` file:
 ```
 HOST=0.0.0.0
 PORT=1337
@@ -264,8 +270,23 @@ In your browser visit `<your-railway-project-url>/admin` to login to your projec
 
 ![Logged in to Strapi Admin on Railway](https://res.cloudinary.com/craigsims808/image/upload/v1737255130/strapi/strapi-railway/logged-in-strapi-on-railway_kx2xiy.png)
 
-## Conclusion
+## Conclusion  
 
-Congratulations! You have successfully deployed your Strapi app on Railway. By following this tutorial, you’ve learned how to set up a Strapi project locally, prepare it for deployment by turning it into a GitHub repository, and configure Railway to host your application. You also explored how to add environment variables, generate a domain for public access, and test your API both locally and on Railway. 
+Self-hosting Strapi on Railway is a straightforward and efficient way to deploy your project and make it accessible online. By leveraging Railway's tools and services, you can simplify the deployment process, manage your environment variables, and scale your application as needed. Whether you prefer using the CLI or GitHub for deployment, this guide equips you with the knowledge to set up a robust and flexible Strapi instance.  
 
-With your Strapi project now live, you can start building and managing APIs for your apps while leveraging Railway’s flexible hosting platform. For more advanced configurations or scaling needs, refer to the [Railway Documentation](https://docs.railway.com) or the [Strapi Documentation](https://docs.strapi.io/). Happy coding!
+Now that your Strapi app is live, you can focus on building and delivering exceptional content and APIs to power your applications. Happy coding! For more advanced configurations or scaling needs, refer to the [Railway Documentation](https://docs.railway.com) or the [Strapi Documentation](https://docs.strapi.io/). Happy coding!
+
+## Resources  
+
+Here are the resources mentioned in this guide to help you get started and explore further:  
+
+0. [GitHub Repo with Source Code](https://github.com/Marktawa/strapi-railway)
+1. [Node.js Official Website](https://nodejs.org/en/download)  
+2. [GitHub Official Website](https://github.com/join)  
+3. [GitHub CLI Documentation](https://cli.github.com)  
+4. [Railway Official Website](https://railway.com/login)  
+5. [Railway CLI GitHub Repository](https://github.com/railwayapp/cli)  
+6. [Strapi Official Website](https://strapi.io)  
+7. [Railway Deployment Options](https://docs.railway.app/quick-start)  
+
+These references provide the tools and documentation needed to set up, deploy, and manage your Strapi application effectively.
