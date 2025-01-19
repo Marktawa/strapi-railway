@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "documentId": "cnuj5blzet9zbtyv3311rpjp",
+            "text": "Hello Strapi",
+            "createdAt": "2025-01-18T07:22:01.233Z",
+            "updatedAt": "2025-01-18T07:22:01.233Z",
+            "publishedAt": "2025-01-18T07:22:01.241Z"
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 1
+        }
+    }
+}
