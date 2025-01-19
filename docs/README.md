@@ -79,4 +79,58 @@ You should see the following JSON response:
 }
 ```
 
+## Turn Strapi project into GitHub repo
 
+Before you deploy the project to Railway, you must turn it into a GitHub repo.
+
+Stop your Strapi server using `CTRL` + `C`. 
+
+Initialize your project directory as a Git repo.
+```shell
+git init
+```
+
+Commit your project files.
+```shell
+git add .
+```
+
+```shell
+git commit -m "Initial commit"
+```
+
+Authenticate with GitHub
+```shell
+gh auth login
+```
+
+Upload your repo to GitHub
+```shell
+gh repo create hello-strapi --public --source=. --remote=origin
+```
+
+```shell
+git push --set-upstream origin master
+```
+
+Replace `hello-strapi` with your desired repo name.
+
+## Deploy to Railway
+
+Railway offers many ways to deploy your web app. You can use the dashboard, the CLI, the API etc. This article: [Railway Deployment Options](https://docs.railway.com/quick-start) explains all the numerous ways you can deploy an app on the Railway platform.
+
+We will use the dashboard for a start.
+
+### Create a new Railway project
+
+Visit dev.new in your browser. This will redirect you to railway.com/new and you will see a **New Project** modal with deployment options.
+
+![Railway New Project Modal](https://res.cloudinary.com/craigsims808/image/upload/v1735561144/freelance/falcon-feather/railway-create-new-project-dashboard_x3f2le.png)
+
+Select **Deploy from GitHub repo** and choose the repo you created previously.
+
+![Deploy From GitHub repo](https://res.cloudinary.com/craigsims808/image/upload/v1735561971/freelance/falcon-feather/deploy-from-github-repo_wv8yvf.png)
+
+The Railway platform will read the contents of your repo, initialize the project, build and then deploy it automatically as a service.
+
+![Railway Build successful](https://res.cloudinary.com/craigsims808/image/upload/v1735586216/freelance/falcon-feather/railway-initial-build_ibv604.png)
